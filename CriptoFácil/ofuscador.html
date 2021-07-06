@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ALEXANDRE OSVALDO DE OLIVEIRA
+    SISTEMAS PARA INTERNET - SI - 52/2021
+    R.A. 200139525
+    ATIVIDADE 01-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Criptografia Fácil</title>
+
+  <style>
+    body{
+        background-attachment: fixed;
+        background-color: rgb(80, 77, 77);
+    }
+    h1{
+      font-family: arial, verdana, sans-serif; font-weight: bold;
+      color: aqua;
+      text-align:center;
+    }
+    #teste1{
+      background: rgb(187, 187, 180);
+      padding: 20px 20px 20px 80px;
+      border: 1px solid rgb(12,12,12);
+      position:absolute;
+      top: 100px;
+      left: 200px;
+    }
+    #teste2{
+         background: rgb(187, 187, 180);
+      padding: 20px 20px 20px 80px;
+      border: 1px solid rgb(12, 12, 12);
+      position:absolute;
+      top: 100px;
+      left: 700px;
+    }
+    #botao1{
+      background: rgb(26, 190, 155);
+      border: 1px solid rgb(31, 70, 177);
+      position:absolute;
+      top: 300px;
+      left: 380px;
+    }
+    #botao2{
+      background: rgb(26, 190, 155);
+      border: 1px solid rgb(31, 70, 177);
+      position:absolute;
+      top: 300px;
+      left: 880px;
+    }
+</style>
+
+</head>
+
+<body>
+    <h1>Criptografia Fácil</h1>
+  <textarea name="teste1"
+            id="teste1"
+            cols="50"
+            rows="10"></textarea>
+  <button id="botao1" onclick="sortField()">Encriptar</button>
+  <button id="botao2" onclick="unsortedField()">Descriptar</button>
+  <textarea name="teste2"
+            id="teste2"
+            cols="50"
+            rows="10"></textarea>
+  <script>
+    const sortField = () => {
+      let field1 = document.getElementById('teste1')
+      let field2 = document.getElementById('teste2')
+
+      let criptext = field1.value
+      .replace(/a/gi, '$&x2z3w')
+      .replace(/e/gi, '$&m4b5n')
+      .replace(/i/gi, '$&r6t7p')
+      .replace(/o/gi, '$&k8l9h')
+      .replace(/u/gi, '$&x1s0d')
+      field2.value = criptext
+      field1.value = ''
+      console.log(criptext)
+    }
+    const unsortedField = () => {
+      let field1 = document.getElementById('teste1')
+      let field2 = document.getElementById('teste2')
+
+      let uncriptext = field2.value
+      .replace(/x2z3w/gi, '')
+      .replace(/m4b5n/gi, '')
+      .replace(/r6t7p/gi, '')
+      .replace(/k8l9h/gi, '')
+      .replace(/x1s0d/gi, '')
+      field1.value = uncriptext
+      field2.value = ''
+      console.log(uncriptext)
+    }
+  </script>
+</body>
+
+</html>
