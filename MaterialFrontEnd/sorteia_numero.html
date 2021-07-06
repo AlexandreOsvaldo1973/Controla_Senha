@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <title>Sorteia Número</title>
+        <meta charset="utf-8">
+
+        <meta name="author" content="Alexandre Osvaldo">
+        <meta name="generator" content="VSCode">
+        <meta name="keywords" content="HTML, matemática, números">
+        <meta name="description" content="Sorteia um número aleatório">
+        <meta name="application-name" content="EnuplaSystems">
+
+        <meta http-equiv="refresh" content="4">
+
+        <script>
+            function sorteianumero(){
+                resultado.innerHTML = Math.random() * 10;
+            }
+            window.onload = sorteianumero
+        </script>
+    </head>
+    <body>
+        <p id="resultado"></p>
+    </body>
+</html>

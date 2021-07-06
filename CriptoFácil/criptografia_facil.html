@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criptografia Fácil</title>
+
+<!-- Configurando estilo da página-->
+
+<style>
+* {
+  margin: 10;
+  padding: 10;
+}
+body {
+  background-color: #fc9804;
+  color: #000001;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  color: #ff0000;
+}
+h2 {
+  width: 100%;
+  text-align: left;
+  color: #ffcc66;
+}
+
+
+</style>
+
+<!-- Função para criptografar a frase - Replace-->
+
+<script type="text/javascript">
+
+        function replace(){
+          var txtreplace = document.getElementsByName("area1").value;
+          var cripto = txtreplace.replace{
+            u:"uga",
+            o:"oga",
+            i:"iga",
+            e:"ega",
+            a:"aga"
+          };
+          document.getElementById("area1").value = document.getElementById("area2").value;
+        }
+}
+
+</script>
+
+</head>
+
+<body>
+
+  <h1>Criptografia Fácil</h1>
+  <h2>Digite sua mensagem para ser criptografada!</h2>
+
+  <fieldset>
+    <legend style= "color:white">Criptofácil</legend>
+
+    <label for="frase" style= "color: white">Insira sua frase:</label><br>
+    <textarea type="text" id="area1" name="area1" rows="5" cols="50" maxlenght="500"></textarea><br>
+    <p>
+      <button type="button" onclick="replace()">Criptografar</button>
+    </p>
+    <textarea id="area2" name="area2" rows="5" cols="50" maxlenght="500"></textarea><br />
+    <p>
+      <button type="button" name="btndiscripto" value="btndiscripto" onclick="area1">Descriptografar</button><br />
+    </p>
+
+</body>
+</html>

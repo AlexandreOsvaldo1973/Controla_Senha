@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criptografia Fácil</title>
+  <style>
+      body{
+          background-attachment: fixed;
+          background-color: rgb(80, 77, 77);
+      }
+      h1{
+        font-family: arial, verdana, sans-serif; font-weight: bold;
+        color: aqua;
+        text-align:center;
+      }
+      #text1{
+        background: rgb(187, 187, 180);
+		padding: 20px 20px 20px 80px;
+        border: 1px solid rgb(12,12,12);
+        position:absolute;
+		top: 100px;
+		left: 200px;
+      }
+      #text2{
+       	background: rgb(187, 187, 180);
+        padding: 20px 20px 20px 80px;
+        border: 1px solid rgb(12, 12, 12);
+        position:absolute;
+		top: 100px;
+		left: 700px;
+      }
+      #botao1{
+        background: rgb(26, 190, 155);
+		border: 1px solid rgb(31, 70, 177);
+        position:absolute;
+		top: 300px;
+		left: 380px;
+      }
+      #botao2{
+        background: rgb(26, 190, 155);
+		border: 1px solid rgb(31, 70, 177);
+        position:absolute;
+		top: 300px;
+		left: 880px;
+      }
+  </style>
+</head>
+<body>
+    <h1>CRIPTOFÁCIL</h1>
+            <textarea name="text1" id="text1" cols="50" rows="10"></textarea><br><p>
+            <button name="botao1" id="botao1" onclick="Cripto()">Criptografa</button>
+            <button name="botao2" id="botao2" onclick="Descripto()">Descriptografa</button><br><p>
+            <textarea name="text2" id="text2" cols="50" rows="10"></textarea>
+ 
+        <script>
+            function Cripto(){
+                const field1 = document.getElementById('text1');
+                var codigo = {
+                    u:"xsd",
+                    o:"klh",
+                    i:"rtp",
+                    e:"mbn",
+                    a:"xzw"
+                 };
+                criptext = field1.replace(/u|o|i|e|a/gi, function(vogal){
+                    let voga = codigo[vogal];
+                    let vogaLista = voga.replace(/(?:^|s)\S/g, function(novogal) {return novogal.toUpperCase()});
+                    return vogaLista;
+                });
+                console.log(vogaLista.value);
+            }
+            const Descripto = () => {
+                let field1 = document.getElementById('text1')
+                let field2 = document.getElementById('text2')
+                field2.value = field1.value
+                console.log(field1.value)
+            }
+         </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Replace, como funciona!</title>
+    <script type="text/javascript">
+      var strLista = "a, e, i, o, u";
+      var listaSubstituir = {
+        a:"aga",
+        e:"ega",
+        i:"iga",
+        o:"oga",
+        u:"uga"
+      };
+      alterarLista = strLista.replace(/a|e|i|o|u/gi, function(item){
+        let it = listaSubstituir[item];
+        let itemLista = it.replace(/(?:^||s)|S/g, function(elemento){return elemento.toUpperCase();});
+        return itemLista;
+      });
+      console.log(alterarLista);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
